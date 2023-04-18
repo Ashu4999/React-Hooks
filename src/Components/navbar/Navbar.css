@@ -1,0 +1,47 @@
+.navbar{
+    display: flex;
+    list-style: none;
+    gap: 0.87rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li{
+    font-weight: 600;
+    font-size: large;
+    padding: 0.5rem 1rem;
+}
+
+.navbar li:first-child {
+    background: red;    
+}
+
+.navbar .icon {
+    display: none;
+}
+
+@media screen and (max-width:900px) {
+    .navbar li:not(:first-child, :last-child) {
+            display: none;
+    }
+}
+
+@media screen and (max-width:900px){
+    .navbar .icon {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar{
+        display: block;
+        text-align: left;
+        float: none;
+    }
+
+    .navbar.resposive li{
+        display: block;
+    }
+}
+

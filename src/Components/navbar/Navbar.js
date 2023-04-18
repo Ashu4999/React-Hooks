@@ -1,0 +1,27 @@
+import React from 'react'
+import { Link } from 'react-router-dom';
+import './Navbar.css'
+export const Navbar = () => {
+
+    function openNav() {
+        let navbarElement = document.getElementById('navbar');
+        if (navbarElement.className === 'navbar') {
+            navbarElement.className += ' resposive';
+        } else {
+            navbarElement.className = 'navbar';
+        }
+    }
+    return (
+        <ul className='navbar' id="navbar">
+            <li><Link to='/'>Hooks</Link></li>
+            <li><Link to='useStateExample'>useState</Link></li>
+            <li><Link to='useEffectExample'>useEffect</Link></li>
+            <li>useContext</li>
+            <li>useRef</li>
+            <li>useReducer</li>
+            <li>useCallback</li>
+            <li>useMemo</li>
+            <li className="icon" onClick={openNav}>&#9776;</li>
+        </ul>
+    )
+}
