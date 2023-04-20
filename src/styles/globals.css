@@ -1,0 +1,27 @@
+.centered-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.column-field-container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btnGroup button {
+  font-size: 25px;
+}
+
+.text-font {
+  font-size: 25px;
+  font-weight: 700;
+}

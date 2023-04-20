@@ -18,7 +18,7 @@ export const Navbar = () => {
             <li><Link to='useEffectExample'>useEffect</Link></li>
             <li>useContext</li>
             <li>useRef</li>
-            <li>useReducer</li>
+            <li><Link to='useReducerExample'>useReducer</Link></li>
             <li>useCallback</li>
             <li>useMemo</li>
             <li className="icon" onClick={openNav}>&#9776;</li>
