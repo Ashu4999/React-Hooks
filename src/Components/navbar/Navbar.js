@@ -17,7 +17,7 @@ export const Navbar = () => {
             <li><Link to='useStateExample'>useState</Link></li>
             <li><Link to='useEffectExample'>useEffect</Link></li>
             <li>useContext</li>
-            <li>useRef</li>
+            <li><Link to="useRefExample">useRef</Link></li>
             <li><Link to='useReducerExample'>useReducer</Link></li>
             <li>useCallback</li>
             <li>useMemo</li>
