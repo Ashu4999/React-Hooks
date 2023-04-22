@@ -3,7 +3,7 @@ import './styles/globals.css'
 import { Navbar } from './Components/navbar/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import { Introduction } from './Components/introduction';
-import { UseStateComp, UseEffectComp, UseReducerComp, UseRefComp } from './Components/hooks_example';
+import { UseStateComp, UseEffectComp, UseReducerComp, UseRefComp, UseCallbackComp } from './Components/hooks_example';
 
 
 
@@ -18,6 +18,7 @@ function App() {
           <Route path='useEffectExample' element={<UseEffectComp />} />
           <Route path='useReducerExample' element={<UseReducerComp />} />
           <Route path='useRefExample' element={<UseRefComp />} />
+          <Route path='useCallbackExample' element={<UseCallbackComp />} />
         </Routes>
       </div>
     </div>
