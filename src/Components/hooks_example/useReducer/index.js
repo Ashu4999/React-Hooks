@@ -30,7 +30,7 @@ export default function UseReducerComp() {
         <section className='centered-container'>
             <div className='column-field-container'>
                 <p className='text-font' style={{ color: state.randomColor }}>Type test below :</p>
-                <input className='text-font' style={{ color: state.randomColor, margin: '7px' }} type="text" value={state.text} onChange={(e) => dispatch({ type: "changeText", payload: e.target.value })} />
+                <input className='input-field' style={{ color: state.randomColor }} type="text" value={state.text} onChange={(e) => dispatch({ type: "changeText", payload: e.target.value })} />
                 <div style={{ color: state.randomColor, fontSize: "35px", fontWeight: 700 }}>{state.count}</div>
                 <div className='btnGroup'>
                     <button onClick={() => dispatch({ type: "increment" })}>+</button>

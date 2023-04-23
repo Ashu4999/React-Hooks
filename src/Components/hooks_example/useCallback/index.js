@@ -26,7 +26,7 @@ export default function UseCallbackComp() {
         <section className="centered-container">
             <p>{`Renders : ${renders.current}`}</p>
             <p>{`Result : ${result}`}</p>
-            <input type="text" placeholder="Random Input" value={text} onChange={(e) => { setText(e.target.value) }} />
+            <input type="text" className="input-field" placeholder="Random Input" value={text} onChange={(e) => { setText(e.target.value) }} />
 
             {/* we use memo and useCallback on addTodos() beacause it passed as prop to TodoComp and it will re-render only when todos state will get changed */}
             <TodoComp todos={todos} addTodos={addTodos} />

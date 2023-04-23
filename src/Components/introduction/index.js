@@ -10,7 +10,12 @@ export const Introduction = () => {
         data && console.log(data[0])
     }, [data]);
 
-    if (error) return <div>failed to load</div>
-    if (isLoading) return <div>loading...</div>
-    return <div>hello {data[0].title}</div>
+    return (
+        <div className='centered-container'>
+            {
+                error ? <div>failed to load</div> :
+                    isLoading ? <div>loading...</div> :
+                        <div>{`Simple react project to undestand hooks of react`}</div>}
+        </div>
+    );
 }

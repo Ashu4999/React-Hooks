@@ -20,7 +20,7 @@ export const Navbar = () => {
             <li><Link to='useRefExample'>useRef</Link></li>
             <li><Link to='useReducerExample'>useReducer</Link></li>
             <li><Link to='useCallbackExample'>useCallback</Link></li>
-            <li>useMemo</li>
+            <li><Link to="useMemoExample">useMemo</Link></li>
             <li className="icon" onClick={openNav}>&#9776;</li>
         </ul>
     )

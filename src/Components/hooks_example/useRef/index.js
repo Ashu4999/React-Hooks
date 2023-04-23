@@ -36,9 +36,10 @@ export default function UseRefComp() {
 
     return (
         <div className="centered-container">
+            <p>useRef Example</p>
             {/*The useRef Hook allows you to persist values between renders.
             It can be used to store a mutable value that does not cause a re-render when updated.*/}
-            <input ref={inputRef} type="text" placeholder="Random Input" value={text} onChange={(e) => { setText(e.target.value) }} />
+            <input ref={inputRef} type="text" className="input-field" placeholder="Random Input" value={text} onChange={(e) => { setText(e.target.value) }} />
 
             <p>State : {text}</p>
             <p>Previous State : {previousTextState.current}</p> {/*Note :- if you start timer then seconds state get changed which cause re-render and text state get changed so that ref also updates to latest value of text state*/}

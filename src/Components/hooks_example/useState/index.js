@@ -23,19 +23,19 @@ export default function UseStateComp() {
                     <tbody>
                         <tr>
                             <td><label htmlFor='firstName'>First Name</label></td>
-                            <td><input type='text' id='firstName' value={user.firstName} onChange={(e) => { changeUserDetails(e) }} required /></td>
+                            <td><input type='text' className="form-input" id='firstName' value={user.firstName} onChange={(e) => { changeUserDetails(e) }} required /></td>
                         </tr>
                         <tr>
                             <td><label htmlFor='lastName'>Last Name</label></td>
-                            <td><input type='text' id='email' value={user.email} onChange={(e) => { changeUserDetails(e) }} required /></td>
+                            <td><input type='text' className="form-input" id='email' value={user.email} onChange={(e) => { changeUserDetails(e) }} required /></td>
                         </tr>
                         <tr>
                             <td><label htmlFor='email'>Email ID</label></td>
-                            <td><input type='text' id='lastName' value={user.lastName} onChange={(e) => { changeUserDetails(e) }} required /></td>
+                            <td><input type='text' className="form-input" id='lastName' value={user.lastName} onChange={(e) => { changeUserDetails(e) }} required /></td>
                         </tr>
                         <tr>
                             <td><label htmlFor='phone'>Phone</label></td>
-                            <td><input type='text' id='phone' value={user.phone} onChange={(e) => { changeUserDetails(e) }} required /></td>
+                            <td><input type='text' className="form-input" id='phone' value={user.phone} onChange={(e) => { changeUserDetails(e) }} required /></td>
                         </tr>
                         <tr>
                             <td colSpan={2}>
@@ -51,7 +51,7 @@ export default function UseStateComp() {
                         </tr>
                         <tr>
                             <td><label htmlFor='address'>Address</label></td>
-                            <td><textarea id='address' rows='4' value={user.address} onChange={(e) => { changeUserDetails(e) }} required /></td>
+                            <td><textarea id='address' className="form-input" rows='4' value={user.address} onChange={(e) => { changeUserDetails(e) }} required /></td>
                         </tr>
                         <tr>
                             <td><button type='submit'>Submit</button></td>
@@ -60,9 +60,9 @@ export default function UseStateComp() {
                     </tbody>
                 </table>
                 <p>
-                    {formSubmitted && <pre>{JSON.stringify(user, null, 2)}</pre>}
+                    {formSubmitted && <pre className='displat-json'>{JSON.stringify(user, null, 2)}</pre>}
                 </p>
             </form>
-        </div>
+        </div >
     )
 }

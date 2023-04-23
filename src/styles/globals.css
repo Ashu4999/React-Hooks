@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .centered-container {
   position: absolute;
   left: 50%;
@@ -25,6 +29,30 @@
 .text-font {
   font-size: 25px;
   font-weight: 700;
+}
+
+.input-field {
+  font-size: 20px;
+  margin: 5px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.form-input {
+  font-size: 20px;
+  margin: 5px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.displat-json {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  max-width: 500px;
 }
 
 @media screen and (max-width:900px) {
