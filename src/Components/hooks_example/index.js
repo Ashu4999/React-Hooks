@@ -4,3 +4,4 @@ export { default as UseReducerComp } from './useReducer';
 export { default as UseRefComp } from './useRef';
 export { default as UseCallbackComp } from './useCallback';
 export { default as UseMemoComp } from './useMemo';
+export { default as UseContextComp } from './useContext';
