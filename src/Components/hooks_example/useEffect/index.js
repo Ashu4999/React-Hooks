@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from 'react'
+import React, { useEffect, useReducer } from 'react';
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -28,6 +28,44 @@ export default function UseEffectComp() {
     useEffect(() => {
         dispatch({ type: "withDependency" });
     }, [state.dependecy]);
+
+
+    useEffect(() => {
+        const handleTabClose = (event) => {
+            // const url = 'http://localhost:4500/test';
+
+            // const formData = new FormData();
+            // formData.append('message', 'User closed the tab');
+            // formData.append('timestamp', new Date().toISOString());
+
+            // // Use navigator.sendBeacon for a reliable API call during page unload
+            // navigator.sendBeacon(url, formData);
+
+            // API endpoint URL
+            const url = 'https://fakestoreapi.com/products';
+
+            const data = JSON.stringify(
+                {
+                    title: 'test product',
+                    price: 13.5,
+                    description: 'lorem ipsum set',
+                    image: 'https://i.pravatar.cc',
+                    category: 'electronic'
+                }
+            );
+            navigator.sendBeacon(url, data);
+
+            // Prevent the default unload behavior if necessary
+            // event.preventDefault();  
+            event.returnValue = ''; // Required for displaying a confirmation dialog in some browsers
+        };
+
+        window.addEventListener('beforeunload', handleTabClose);
+
+        return () => {
+            window.removeEventListener('beforeunload', handleTabClose);
+        };
+    }, []);
 
     return (
         <div className='centered-container'>
